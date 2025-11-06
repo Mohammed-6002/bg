@@ -37,60 +37,89 @@
         </div>
     </nav>
 
+    <!-- Inhoud -->
     <div class="container py-5">
         <div class="row mb-5">
-            <div class="col-12">
-                <h1 class="display-4 fw-bold mb-4">Hulpmiddelen</h1>
-                <p class="lead">Bekijk checklists, instructieve video's en externe bronnen. Alle hulpmiddelen die je nodig hebt op één plek.</p>
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold mb-3">Hulpmiddelen</h1>
+                <p class="lead mb-0">Bekijk handige checklists en gebruik de tool om snel je salaris te berekenen.</p>
             </div>
         </div>
 
-
-
-        <div class="row mb-5">
-            <div class="col-12">
-                <h2 class="h1 mb-4">Checklists & Tools</h2>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 card-hover">
-                            <div class="card-body text-center">
-                                <i class="fas fa-check-square fa-3x text-primary mb-3"></i>
-                                <h5 class="card-title">Sollicitatie Checklist</h5>
-                                <p class="card-text">Stap voor stap checklist om niets te vergeten bij je sollicitatie</p>
-                            </div>
-                        </div>
+        <!-- Checklists -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 card-hover">
+                    <div class="card-body text-center">
+                        <i class="fas fa-check-square fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Sollicitatie Checklist</h5>
+                        <p class="card-text">Stap voor stap checklist om niets te vergeten bij je sollicitatie.</p>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 card-hover">
-                            <div class="card-body text-center">
-                                <i class="fas fa-check-square fa-3x text-primary mb-3"></i>
-                                <h5 class="card-title">Gesprek Voorbereiding</h5>
-                                <p class="card-text">Lijst met veelgestelde vragen en tips voor je antwoorden</p>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 card-hover">
+                    <div class="card-body text-center">
+                        <i class="fas fa-check-square fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Gesprek Voorbereiding</h5>
+                        <p class="card-text">Lijst met veelgestelde vragen en ruimte om je antwoorden te bedenken.</p>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 card-hover">
-                            <div class="card-body text-center">
-                                <i class="fas fa-check-square fa-3x text-primary mb-3"></i>
-                                <h5 class="card-title">Eerste Werkdag Checklist</h5>
-                                <p class="card-text">Wat moet je regelen en meenemen op je eerste werkdag</p>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 card-hover">
+                    <div class="card-body text-center">
+                        <i class="fas fa-check-square fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Eerste Werkdag Checklist</h5>
+                        <p class="card-text">Wat moet je regelen en meenemen op je eerste werkdag.</p>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 card-hover">
-                            <div class="card-body text-center">
-                                <i class="fas fa-check-square fa-3x text-primary mb-3"></i>
-                                <h5 class="card-title">Salaris Onderhandeling</h5>
-                                <p class="card-text">Tool om je gewenste salaris te berekenen en onderbouwen</p>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 card-hover">
+                    <div class="card-body text-center">
+                        <i class="fas fa-check-square fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Salaris Onderhandeling</h5>
+                        <p class="card-text">Punten om je gewenste salaris goed te kunnen uitleggen.</p>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Tool mooi gecentreerd -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8 col-lg-6">
+                <div class="card h-100 card-hover shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title text-center mb-3">
+                            <i class="fas fa-calculator me-2 text-primary"></i>
+                            Uurloon naar maandbedrag
+                        </h5>
+                        <p class="text-muted small text-center mb-4">
+                            Bereken snel wat je ongeveer per week en maand verdient op basis van je uurloon.
+                        </p>
+
+                        <div class="mb-3">
+                            <label class="form-label">Uurloon (€)</label>
+                            <input type="number" step="0.01" class="form-control" id="salUurloon" placeholder="Bijv. 14.05">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Uren per week</label>
+                            <input type="number" class="form-control" id="salUren" value="36">
+                        </div>
+
+                        <div class="d-grid mb-3">
+                            <button class="btn btn-primary" id="salBereken">Bereken</button>
+                        </div>
+
+                        <div id="salResult" class="tool-result small text-center d-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
         <div class="row mb-5">
             <div class="col-12">
                 <h2 class="h1 mb-4">Instructieve Video's</h2>
@@ -280,6 +309,25 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Tool: Uurloon naar maandbedrag
+        const salBtn = document.getElementById('salBereken');
+        const salResult = document.getElementById('salResult');
+
+        salBtn.addEventListener('click', function() {
+            const uurloon = parseFloat(document.getElementById('salUurloon').value);
+            const uren = parseFloat(document.getElementById('salUren').value);
+
+            if (isNaN(uurloon) || isNaN(uren)) return;
+
+            const week = uurloon * uren;
+            const maand = week * 4.33;
+            salResult.innerHTML = 
+                'Geschat per week: <strong>€ ' + week.toFixed(2) +
+                '</strong><br>Geschat per maand: <strong>€ ' + maand.toFixed(2) + '</strong>';
+            salResult.classList.remove('d-none');
+        });
+    </script>
 </body>
 </html>
