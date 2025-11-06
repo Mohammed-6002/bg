@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbeidsrechten - Werkstarter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .card-hover:hover { transform: translateY(-5px); transition: transform 0.3s; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-briefcase me-2"></i>
+                <span class="fw-bold">Werkstarter</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="werk-zoeken.html">Werk Zoeken</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv-motivatiebrief.html">CV & Motivatiebrief</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="arbeidsrechten.html">Arbeidsrechten</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tips.html">Tips & Ondersteuning</a></li>
+                    <li class="nav-item"><a class="nav-link" href="arbeidsmarkt.html">Arbeidsmarkt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hulpmiddelen.html">Hulpmiddelen</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row mb-5">
+            <div class="col-12">
+                <h1 class="display-4 fw-bold mb-4">Arbeidsrechten & Plichten</h1>
+                <p class="lead">Volledige informatie over je rechten en plichten als werknemer. Van contractvormen tot minimumloon en sociale zekerheid.</p>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="h1 mb-4">Soorten Arbeidscontracten</h2>
+                <ul class="nav nav-tabs" id="contractTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="vast-tab" data-bs-toggle="tab" data-bs-target="#vast" type="button" role="tab">Vast Contract</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tijdelijk-tab" data-bs-toggle="tab" data-bs-target="#tijdelijk" type="button" role="tab">Tijdelijk Contract</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="oproep-tab" data-bs-toggle="tab" data-bs-target="#oproep" type="button" role="tab">Oproepcontract</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="uitzend-tab" data-bs-toggle="tab" data-bs-target="#uitzend" type="button" role="tab">Uitzendcontract</button>
+                    </li>
+                </ul>
+                <div class="tab-content mt-4" id="contractTabsContent">
+                    <div class="tab-pane fade show active" id="vast" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="mb-0">Vast Contract</h3>
+                                <p class="text-muted mb-0">Een arbeidsovereenkomst voor onbepaalde tijd (tot pensionering of ontslag).</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5 class="text-success"><i class="fas fa-plus me-2"></i>Voordelen</h5>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check text-success me-2"></i>Meeste zekerheid en bescherming</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Moeilijker om ontslagen te worden</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Recht op WW-uitkering bij ontslag</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Betere hypotheekmogelijkheden</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5 class="text-warning"><i class="fas fa-exclamation-triangle me-2"></i>Let op</h5>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Werkgever moet ontslagvergunning aanvragen</li>
+                                            <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Proeftijd maximaal 2 maanden</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tijdelijk" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="mb-0">Tijdelijk Contract</h3>
+                                <p class="text-muted mb-0">Een arbeidsovereenkomst voor bepaalde tijd (met einddatum).</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5 class="text-success"><i class="fas fa-plus me-2"></i>Voordelen</h5>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check text-success me-2"></i>Goed om ervaring op te doen</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Kans om jezelf te bewijzen</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Na 3 tijdelijke contracten vaak vast</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Flexibiliteit voor korte projecten</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5 class="text-warning"><i class="fas fa-exclamation-triangle me-2"></i>Let op</h5>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Minder zekerheid</li>
+                                            <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Maximaal 3 achter elkaar voor 3 jaar</li>
+                                            <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Tussenpozen van meer dan 6 maanden resetten de keten</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="oproep" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="mb-0">Oproepcontract</h3>
+                                <p class="text-muted mb-0">Je werkt alleen wanneer de werkgever je oproept (flexibel).</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5 class="text-success"><i class="fas fa-plus me-2"></i>Voordelen</h5>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check text-success me-2"></i>Veel flexibiliteit in je planning</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Geschikt naast studie</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Ervaring opdoen in verschillende situaties</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5 class="text-warning"><i class="fas fa-exclamation-triangle me-2"></i>Let op</h5>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Geen vast inkomen</li>
+                                            <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Geen gegarandeerde uren</li>
+                                            <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Na 12 maanden recht op vast uren gemiddelde</li>
+                                            <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Moeilijk om budget te plannen</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="uitzend" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="mb-0">Uitzendcontract</h3>
+                                <p class="text-muted mb-0">Je bent in dienst bij een uitzendbureau en wordt uitgeleend aan bedrijven.</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5 class="text-success"><i class="fas fa-plus me-2"></i>Voordelen</h5>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check text-success me-2"></i>Snelle manier om aan werk te komen</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Ervaring bij verschillende bedrijven</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Vaak doorgroeimogelijkheden</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Uitzendbureau regelt administratie</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5 class="text-warning"><i class="fas fa-exclamation-triangle me-2"></i>Let op</h5>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Minder zekerheid dan vast contract</li>
+                                            <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Soms wisselende werkplekken</li>
+                                            <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Fase-systeem: van flex naar vast in 3,5 jaar</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="h1 mb-4">Jouw Rechten als Werknemer</h2>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="card h-100 card-hover">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-euro-sign fa-2x text-primary me-3"></i>
+                                    <h5 class="card-title mb-0">Minimumloon</h5>
+                                </div>
+                                <p class="card-text">Vanaf 21 jaar heb je recht op het wettelijk minimumloon.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>21+ jaar: €14,05 per uur (vanaf 1 januari 2025)</li>
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>20 jaar: 80% van minimumloon</li>
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>19 jaar: 60% van minimumloon</li>
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>18 jaar: 50% van minimumloon</li>
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Bedragen worden twee keer per jaar aangepast</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100 card-hover">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-clock fa-2x text-primary me-3"></i>
+                                    <h5 class="card-title mb-0">Arbeidstijdenwet</h5>
+                                </div>
+                                <p class="card-text">Regels over hoeveel je mag werken en welke pauzes je krijgt.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Maximaal 12 uur per dag werken</li>
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Maximaal 60 uur per week</li>
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Gemiddeld 48 uur per week over 16 weken</li>
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Na 5,5 uur werken minimaal 30 minuten pauze</li>
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Minimaal 11 uur rust tussen werkdagen</li>
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Minimaal 36 uur aaneengesloten rust per week</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100 card-hover">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-calendar-alt fa-2x text-primary me-3"></i>
+                                    <h5 class="card-title mb-0">Vakantiedagen</h5>
+                                </div>
+                                <p class="card-text">Je hebt wettelijk recht op minimaal 4 keer je werkweek aan vakantiedagen per jaar.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Fulltime (5 dagen): minimaal 20 vakantiedagen</li>
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Parttime naar rato van je werkweek</li>
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Veel werkgevers bieden meer dan het minimum</li>
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Vakantiegeld: minimaal 8% van je jaarloon</li>
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Opbouw vanaf eerste werkdag</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100 card-hover">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-shield-alt fa-2x text-primary me-3"></i>
+                                    <h5 class="card-title mb-0">Sociale Zekerheid</h5>
+                                </div>
+                                <p class="card-text">Verzekeringen waar je recht op hebt als werknemer.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>WW (Werkloosheidswet): bij ontslag</li>
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>WIA (Arbeidsongeschiktheid): bij ziekte langer dan 2 jaar</li>
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Ziektewet: bij ziekte (werkgever betaalt 2 jaar door)</li>
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>AOW: pensioen vanaf 67 jaar (stijgt mee)</li>
+                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Automatisch verzekerd via werkgever</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="h1 mb-4"><i class="fas fa-balance-scale me-2"></i>Jouw Plichten als Werknemer</h2>
+                        <p class="lead">Naast rechten heb je ook verplichtingen tegenover je werkgever.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ol class="list-unstyled">
+                                    <li><span class="badge bg-primary me-2">1</span>Je werk goed en zorgvuldig uitvoeren</li>
+                                    <li><span class="badge bg-primary me-2">2</span>Je houden aan bedrijfsregels en instructies</li>
+                                    <li><span class="badge bg-primary me-2">3</span>Vertrouwelijke informatie niet delen</li>
+                                    <li><span class="badge bg-primary me-2">4</span>Ziekmelden op tijd en volgens de procedure</li>
+                                    <li><span class="badge bg-primary me-2">5</span>Schade aan bedrijfseigendommen voorkomen</li>
+                                    <li><span class="badge bg-primary me-2">6</span>Je werkgever op de hoogte houden van je beschikbaarheid</li>
+                                    <li><span class="badge bg-primary me-2">7</span>Meewerken aan re-integratie bij langdurige ziekte</li>
+                                    <li><span class="badge bg-primary me-2">8</span>Belangenconflicten vermijden (geen concurrerende bijbaan)</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="h1 mb-4">Belangrijk om te Weten</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card border-warning">
+                            <div class="card-body">
+                                <h5 class="card-title text-warning"><i class="fas fa-exclamation-triangle me-2"></i>Proeftijd</h5>
+                                <p class="card-text">Maximaal 2 maanden bij vast contract, 1 maand bij contract korter dan 2 jaar. Beide partijen kunnen in deze periode het contract beëindigen zonder opzegtermijn.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-warning">
+                            <div class="card-body">
+                                <h5 class="card-title text-warning"><i class="fas fa-exclamation-triangle me-2"></i>Opzegtermijn</h5>
+                                <p class="card-text">Als werknemer minimaal 1 maand. Als werkgever afhankelijk van dienstjaren (1 maand tot 4 maanden). Check altijd je contract.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-warning">
+                            <div class="card-body">
+                                <h5 class="card-title text-warning"><i class="fas fa-exclamation-triangle me-2"></i>Concurrentiebeding</h5>
+                                <p class="card-text">Kan voorkomen in je contract. Betekent dat je na ontslag niet bij een concurrent mag werken. Maximaal 1 jaar geldig en moet redelijk zijn.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-warning">
+                            <div class="card-body">
+                                <h5 class="card-title text-warning"><i class="fas fa-exclamation-triangle me-2"></i>Onkostenvergoeding</h5>
+                                <p class="card-text">Werkgever moet redelijke kosten vergoeden die je maakt voor je werk (reiskosten, telefoon, etc.). Check of dit in je contract staat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h2 class="h1 mb-4"><i class="fas fa-shield-alt me-2"></i>Hulp nodig bij arbeidsconflicten?</h2>
+                        <p class="lead">Als je problemen hebt met je werkgever of vragen hebt over je rechten, kun je terecht bij:</p>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-arrow-right me-2"></i><strong>Juridisch Loket:</strong> Gratis juridisch advies</li>
+                                    <li><i class="fas fa-arrow-right me-2"></i><strong>Vakbond:</strong> Als je lid bent (FNV, CNV, etc.)</li>
+                                    <li><i class="fas fa-arrow-right me-2"></i><strong>UWV:</strong> Voor vragen over uitkeringen</li>
+                                    <li><i class="fas fa-arrow-right me-2"></i><strong>Arbeidsinspectie:</strong> Bij onveilige werksituaties</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-briefcase me-2"></i>
+                        <span class="fw-bold fs-5">Werkstarter</span>
+                    </div>
+                    <p class="mb-0">Jouw gids van diploma naar werk. Alle informatie die je nodig hebt om succesvol de arbeidsmarkt op te gaan.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Navigatie</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="werk-zoeken.html" class="text-white-50">Werk Zoeken</a></li>
+                        <li><a href="cv-motivatiebrief.html" class="text-white-50">CV & Motivatiebrief</a></li>
+                        <li><a href="arbeidsrechten.html" class="text-white-50">Arbeidsrechten</a></li>
+                        <li><a href="tips.html" class="text-white-50">Tips & Ondersteuning</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Informatie</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="arbeidsmarkt.html" class="text-white-50">Arbeidsmarkt</a></li>
+                        <li><a href="hulpmiddelen.html" class="text-white-50">Hulpmiddelen</a></li>
+                        <li><a href="contact.html" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Contact</h5>
+                    <p class="text-white-50 mb-3">Heb je vragen of wil je meer informatie? Neem gerust contact met ons op.</p>
+                    <a href="contact.html" class="btn btn-outline-light">
+                        <i class="fas fa-envelope me-2"></i>Neem Contact Op
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
